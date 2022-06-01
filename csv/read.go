@@ -21,6 +21,12 @@ type Event struct {
 	TargetEnd   int
 }
 
+type Match struct {
+	StartTime time.Time
+	EndTime   time.Time
+	TargetCount int
+}
+
 // CSVファイルの読み込み
 func ReadCsv(filePath string) ([]Event, error) {
 
@@ -73,3 +79,5 @@ func readData(filePath string) ([][]string, error) {
 	}
 	return records, nil
 }
+
+
