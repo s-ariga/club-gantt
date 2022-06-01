@@ -13,7 +13,7 @@ import (
 
 func checkFileExists(filePath string) bool {
 	_, err := os.Stat(filePath)
-	return err != nil
+	return err == nil
 }
 
 func main() {

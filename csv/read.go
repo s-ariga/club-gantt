@@ -34,11 +34,11 @@ func ReadCsv(filePath string) ([]Event, error) {
 	events := make([]Event, len(records))
 	for i, record := range records {
 		events[i].Name = record[0]
-		events[i].StartTime, err = time.Parse("2006-01-02 01:02", record[1])
+		events[i].StartTime, err = time.Parse("2006-01-02 15:04", record[1])
 		if err != nil {
 			return []Event{}, err
 		}
-		events[i].EndTime, err = time.Parse("2006-01-02 01:02", record[2])
+		events[i].EndTime, err = time.Parse("2006-01-02 15:04", record[2])
 		if err != nil {
 			return []Event{}, err
 		}
